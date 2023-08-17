@@ -9,15 +9,26 @@
     color: #12294d;
   }
   h1 {
-    @apply text-2xl;
+    @apply text-3xl;
+    @apply font-bold;
   }
   h2 {
+    @apply text-2xl;
+    @apply font-medium;
+  }
+  h3 {
     @apply text-xl;
+    @apply font-bold;
   }
 }
 
 .bg-hero {
   background-image: linear-gradient(to bottom, #bddafd85, #12294dba),
     url(../images/zaluzje-47.webp);
-  height: 91dvh;
+  height: fit-content;
+}
+@media (min-width: 768px) {
+  .bg-hero {
+    height: 91dvh;
+  }
 }

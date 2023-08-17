@@ -7,12 +7,16 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      primary: "#12294d",
-      secondary: "#76b5ff",
-      additional: "#bddafd",
-      contrast: "#ffc531",
-      neutral: "#080e24",
+    extend: {
+      colors: {
+        primary: "#12294d",
+        secondary: "#76b5ff",
+        additional: "#bddafd",
+        contrast: "#ffc531",
+        neutral: "#080e24",
+        white: "#ffffff",
+        transparentWhite: "#ffffff33",
+      },
     },
     screens: {
       sm: "480px",

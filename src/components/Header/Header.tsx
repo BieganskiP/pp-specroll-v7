@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="p-4">
+      <div className="p-4 sticky top-0 bg-white z-10 w-full">
         <div className="flex justify-between max-w-screen-xl mx-auto">
           <Logo />
           <div className="flex justify-center items-center">

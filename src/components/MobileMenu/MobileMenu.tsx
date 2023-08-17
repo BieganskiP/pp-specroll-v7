@@ -9,7 +9,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen }) => {
   const activeClass = isOpen ? styles.active : "";
 
   return (
-    <div className={`${activeClass} ${styles.menu}`}>
+    <div className={`${activeClass} ${styles.menu} bg-white`}>
       <Nav direction="col" />
     </div>
   );
