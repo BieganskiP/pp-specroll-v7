@@ -1,9 +1,10 @@
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MarqueeComponent() {
   return (
-    <div className="w-full h-80">
+    <div className="w-full h-80 mb-8 flex justify-center items-center flex-col">
       <Marquee className="h-full">
         <Image
           alt="img1"
@@ -55,6 +56,12 @@ export default function MarqueeComponent() {
           height={300}
         />
       </Marquee>
+      <Link
+        href="/services"
+        className="text-2xl font-bold underline hover:text-additional transition-all"
+      >
+        Sprawdź nasze usługi
+      </Link>
     </div>
   );
 }

@@ -10,7 +10,7 @@ export default function Process() {
   const icons = [faTape, faTags, faScrewdriverWrench];
 
   return (
-    <div className="max-w-screen-xl p-4 mx-auto text-center mb-8">
+    <div className="container p-4 mx-auto text-center mb-8">
       <h2 className="mb-4">Proces</h2>
       <div className="flex justify-center items-center flex-col lg:flex-row">
         {data.map((item, index) => (

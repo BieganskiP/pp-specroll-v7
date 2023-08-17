@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <div className="bg-cover bg-no-repeat bg-hero text-white mb-8">
-      <div className="max-w-screen-xl w-full h-full mx-auto flex-col md:flex-row flex justify-center items-center p-4">
+      <div className="container w-full h-full mx-auto flex-col md:flex-row flex justify-center items-center p-4">
         <div className="Newtext-center">
           <h1 className="m-4">
             Rolety | Żaluzje | Plisy | Bramy garażowe | Markizy | Moskitiery
