@@ -3,11 +3,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Nav() {
+interface NavProps {
+  direction: string;
+}
+const Nav: React.FC<NavProps> = ({ direction }) => {
   const location = usePathname();
 
   return (
-    <ul className="flex justify-center items-center flex-row text-lg lg:text-2xl font-semibold">
+    <ul
+      className={`flex justify-center items-center flex-${direction} text-lg lg:text-2xl font-semibold`}
+    >
       <li>
         <Link
           href="/"
@@ -50,4 +55,6 @@ export default function Nav() {
       </li>
     </ul>
   );
-}
+};
+
+export default Nav;

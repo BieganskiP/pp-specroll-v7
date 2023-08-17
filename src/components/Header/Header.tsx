@@ -1,26 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Hamburger from "../Hamburger/Hamburger";
 import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 import useScreenSize from "@/hooks/useScreenSize";
 
 export default function Header() {
   const screenSize = useScreenSize();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (screenSize === "large") {
+      setIsOpen(false);
+    }
+  }, [screenSize]);
 
   return (
-    <div className="p-4">
-      <div className="flex justify-between max-w-screen-xl mx-auto">
-        <Logo />
-        <div className="flex justify-center items-center">
-          {screenSize === "large" && <Nav />}
-          {(screenSize === "small" || screenSize === "medium") && <Hamburger />}
+    <>
+      <div className="p-4">
+        <div className="flex justify-between max-w-screen-xl mx-auto">
+          <Logo />
+          <div className="flex justify-center items-center">
+            {screenSize === "large" && <Nav direction="row" />}
+            {(screenSize === "small" || screenSize === "medium") && (
+              <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
+            )}
+          </div>
         </div>
       </div>
-    </div>
+      <MobileMenu isOpen={isOpen} />
+    </>
   );
 }

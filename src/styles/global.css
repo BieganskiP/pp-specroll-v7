@@ -15,3 +15,9 @@
     @apply text-xl;
   }
 }
+
+.bg-hero {
+  background-image: linear-gradient(to bottom, #bddafd85, #12294dba),
+    url(../images/zaluzje-47.webp);
+  height: 91dvh;
+}
