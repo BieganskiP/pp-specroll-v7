@@ -7,9 +7,9 @@ function useScreenSize() {
 
   const checkScreenSize = () => {
     const width = window.innerWidth;
-    if (width < 576) {
+    if (width < 672) {
       setScreenSize("small");
-    } else if (width >= 576 && width < 992) {
+    } else if (width >= 672 && width < 990) {
       setScreenSize("medium");
     } else {
       setScreenSize("large");
