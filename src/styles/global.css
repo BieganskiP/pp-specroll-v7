@@ -9,12 +9,12 @@
     color: #12294d;
   }
   h1 {
-    @apply text-3xl;
+    @apply text-4xl;
     @apply font-bold;
   }
   h2 {
-    @apply text-2xl;
-    @apply font-medium;
+    @apply text-3xl;
+    @apply font-bold;
   }
   h3 {
     @apply text-xl;
